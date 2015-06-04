@@ -1,23 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>  
- <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
- 	xmlns="http://es/enbinario/webservices/employeeService"
- 	xmlns:employee="http://es/enbinario/webservices/employee"
- 	targetNamespace="http://es/enbinario/webservices/employeeService"
- 	elementFormDefault="qualified">  
-      <xsd:import namespace="http://es/enbinario/webservices/employee"
-      schemaLocation="EmployeeDetails.xsd"/>  
-      <xsd:element name="EmployeeDetailsRequest">  
-           <xsd:complexType>  
-                <xsd:sequence>  
-                     <xsd:element name="employeeId" type="xsd:string"/>  
-                </xsd:sequence>  
-           </xsd:complexType>  
-      </xsd:element>  
-      <xsd:element name="EmployeeDetailsResponse">  
-           <xsd:complexType>  
-                <xsd:sequence>  
-                     <xsd:element name="EmployeeDetails" type="employee:Employee"/>  
-                </xsd:sequence>  
-           </xsd:complexType>  
-      </xsd:element>  
- </xsd:schema>
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://es/enbinario/webservices/employeeService" 
+	xmlns:employee="http://es/enbinario/webservices/employee"
+	targetNamespace="http://es/enbinario/webservices/employeeService"
+	elementFormDefault="qualified">
+
+	<xsd:import namespace="http://es/enbinario/webservices/employee" schemaLocation="EmployeeDetails.xsd" />
+
+	<!-- Define la request -->
+	<xsd:element name="EmployeeDetailsRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="employeeId" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<!-- Define la response -->
+	<xsd:element name="EmployeeDetailsResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="EmployeeDetails" type="employee:Employee" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
